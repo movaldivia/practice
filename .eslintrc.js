@@ -10,15 +10,12 @@ module.exports = {
   },
   extends: [
     "eslint:recommended",
-    "prettier",
   ],
   plugins: [
-    "prettier",
+
   ],
   rules: {
-    "prettier/prettier": ["error", {
-      trailingComma: "es5",
-      semi: false,
-    }],
+    "no-console": 0,
+    semi: [2, "never"]
   },
 };
