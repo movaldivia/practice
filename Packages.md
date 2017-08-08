@@ -11,3 +11,7 @@
 ## Body
 - [bodyparser](https://github.com/koajs/bodyparser)
 - [koa-better-body](https://github.com/tunnckoCore/koa-better-body)
+
+## Dev
+- [koa-json](https://github.com/koajs/json)
+- [nodemon](https://github.com/remy/nodemon)
