@@ -1,29 +1,12 @@
-const Koa = require('koa');
-const KoaRouter = require('koa-router');
+/* eslint no-console: "off" */
 
-const app = new Koa();
-const router = new KoaRouter();
-
-// router.use(async (ctx, next) => {
-//   console.log('Headers', ctx.headers);
-//   console.log('Params', ctx.params);
-//   await next();
-// });
-
-router.get('/', (ctx) => {
-  ctx.body = {
-    message: 'Hello world',
-  };
-});
-
-router.post('/', (ctx) => {
-  ctx.body = {
-    message: 'What u doing?',
-  };
-});
-
-app.use(router.routes());
+const app = require('./src/app');
 
 const PORT = process.env.PORT || 3000;
-
-app.listen(PORT);
+app.listen(PORT, (err) => {
+  if (err) {
+    return console.error('Failed', err);
+  }
+  console.log(`Listening on port ${PORT}`);
+  return app;
+});
