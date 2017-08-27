@@ -1,9 +1,10 @@
-const Koa = require('koa');
-const session = require('koa-session');
-const koaLogger = require('koa-logger');
 const path = require('path');
+const Koa = require('koa');
 const koaBody = require('koa-body');
+const koaLogger = require('koa-logger');
+const koaFlashMessage = require('koa-flash-message').default;
 const render = require('koa-ejs');
+const session = require('koa-session');
 const routes = require('./routes');
 const orm = require('./models');
 
@@ -33,6 +34,9 @@ app.use(koaLogger());
 app.use(session({
   maxAge: 14 * 24 * 60 * 60 * 1000, // 2 weeks
 }, app));
+
+// flash messages support
+app.use(koaFlashMessage);
 
 // parse request body
 app.use(koaBody({
