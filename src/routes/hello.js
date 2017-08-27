@@ -8,6 +8,11 @@ router.get('hello', '/', async (ctx) => {
   });
 });
 
+router.post('hello', '/', (ctx) => {
+  console.log(ctx.request.body);
+  ctx.body = { status: 'OK' };
+});
+
 router.get('hello.name', '/:name', (ctx) => {
   ctx.body = { message: `Hello ${ctx.params.name}!` };
 });
