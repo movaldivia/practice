@@ -10,8 +10,9 @@ const override = require('koa-override-method');
 const assets = require('./assets');
 const mailer = require('./mailers');
 const routes = require('./routes');
+const apiRoutes = require('./routes/api')
 const orm = require('./models');
-
+require('dotenv').config()
 // App constructor
 const app = new Koa();
 
@@ -81,6 +82,7 @@ render(app, {
 mailer(app);
 
 // Routing middleware
+app.use(apiRoutes.routes());
 app.use(routes.routes());
 
 module.exports = app;
