@@ -1,0 +1,32 @@
+ul.navbar {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: #333;
+        height: 60px;
+        overflow: hidden;
+}
+
+
+li.navbar.right {
+    float: right;
+    a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 20px 16px;
+        text-decoration: none;
+    }
+}
+li.navbar.left {
+    float: left;
+    a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 10px 10px;
+        margin: 0px 0px 0px 0px;
+        text-decoration: none;
+        font-size: 40px;
+    }
+} 

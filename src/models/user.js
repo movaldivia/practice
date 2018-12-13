@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
     Lastexpirence: DataTypes.STRING
   }, {});
   User.associate = function(models) {
-    // associations can be defined here
+    User.hasMany(Search, {as: 'Searches'})
   };
   return User;
 };

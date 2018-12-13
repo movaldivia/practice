@@ -3,7 +3,8 @@ const KoaRouter = require('koa-router');
 const router = new KoaRouter();
 
 router.get('users', '/', async (ctx) => {
-    ctx.body = await ctx.orm.user.findAll();
+    console.log(ctx.orm)
+    ctx.body = await ctx.orm.User.findAll();
 });
 
 router.post('user-create', '/', async (ctx) => {

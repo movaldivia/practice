@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
     image: DataTypes.STRING
   }, {});
   Employer.associate = function(models) {
-    // associations can be defined here
+    Employer.hasMany(models.Search, {as: 'Searches'})
   };
   return Employer;
 };
