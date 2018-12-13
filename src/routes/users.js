@@ -8,7 +8,7 @@ router.get('users', '/', async (ctx) => {
 });
 
 router.post('user-create', '/', async (ctx) => {
-    await ctx.orm.user.create(ctx.request.body);
+    await ctx.orm.User.create(ctx.request.body);
 })
 
 module.exports = router
