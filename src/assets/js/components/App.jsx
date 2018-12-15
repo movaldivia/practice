@@ -3,15 +3,40 @@ import { hot } from 'react-hot-loader';
 import Submit from './submit/components/submit';
 import Navbar from './navbar/components/nagvar';
 import Search from './search/components/search';
-
+import Particles from 'react-particles-js';
 
 function App(props){
   return(
-  <div class="grad">
+  <div className="grad">
+
     <Navbar/>
-    <h1 id="tituloHomepage">Bienvenido</h1>
+    <h1 id="tituloHomepage">BIENVENIDO</h1>
     <Submit/>
-    <Search/>
+    
+    
+    {/* <Search/> */}
+    
+    <Particles className="hola" params={{
+            "particles":{
+              "number":{
+                "value":100
+              },
+              "size":{
+                "value":3
+              }
+            },
+      	    "interactivity": {
+              "events": {
+                  "onhover": {
+                      "enable": true,
+                      "mode": "repulse"
+                  }
+              }
+          }
+    }}
+    
+    />
+
   </div>
   )
 }

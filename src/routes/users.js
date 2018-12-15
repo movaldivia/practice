@@ -3,7 +3,6 @@ const KoaRouter = require('koa-router');
 const router = new KoaRouter();
 
 router.get('users', '/', async (ctx) => {
-    console.log(ctx.orm)
     ctx.body = await ctx.orm.User.findAll();
 });
 

@@ -49,7 +49,7 @@ export default class NameForm extends React.Component {
             Password:
             <input type="text" id='password' value={this.state.password} onChange={this.handleChange} />
           </label>
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Submit" id="submit" />
         </form>
       );
     }

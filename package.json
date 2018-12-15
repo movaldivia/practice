@@ -58,6 +58,7 @@
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-hot-loader": "^4.3.4",
+    "react-particles-js": "^2.4.2",
     "sequelize": "^4.6.0",
     "sequelize-cli": "^4.1.1"
   },
